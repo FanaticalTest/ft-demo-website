@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Demo Website - Login</title>
+</head>
+<body>
+<form action="../" onclick="return clickLogin(this);">
+    <table>
+        <tr>
+            <td>Username :</td>
+            <td><input type="text" id="username-field"></td>
+        </tr>
+        <tr>
+            <td>Password :</td>
+            <td><input type="password" id="password-field"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" id="login-submit" value="Login"></td>
+        </tr>
+    </table>
+</form>
+<div id="validatorLogin"></div>
+<script type="text/javascript" language="JavaScript">
+<!--
+function clickLogin(theForm) {
+    if (
+    document.getElementById('username-field').value == "test" &&
+    document.getElementById('password-field').value == "test")
+    {
+        return true;
+    } else {
+        document.getElementById("validatorLogin").innerHTML = "Wrong username and password";
+        return false;
+    }
+}
+//-->
+
+</script>
+</body>
+</html>

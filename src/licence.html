@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Demo Website - Terms and Conditions</title>
+</head>
+<body>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut aliquam erat, sit amet venenatis felis. Quisque mollis egestas justo,
+    vel ultricies nisi vulputate ut. Phasellus condimentum leo neque, in ultricies metus varius sit amet. Fusce vulputate ante non porta
+    auctor. Vestibulum non velit purus. Nam sed ipsum blandit, pellentesque magna in, convallis lorem. Morbi viverra consectetur nibh ac
+    scelerisque. Praesent sit amet eleifend lacus. Ut nisi leo, fermentum quis malesuada a, congue vel massa. Praesent bibendum eros lacus,
+    ut pellentesque augue varius ac. Nunc egestas porttitor dignissim.
+    <br><br>
+    Vestibulum sed tortor id mauris blandit eleifend id non magna. Praesent ac erat facilisis, fermentum lacus eu, cursus metus. Ut erat
+    risus, ullamcorper sit amet ex id, finibus suscipit mauris. Morbi bibendum erat vel quam convallis, ut euismod ligula eleifend. Mauris
+    iaculis orci augue, a semper nulla venenatis at. Mauris sollicitudin, enim non ornare ultrices, odio sapien molestie tortor, in suscipit
+    magna velit quis est. Sed consequat arcu ut ultricies sagittis. Maecenas a pellentesque elit, et porttitor nisi. Aenean condimentum
+    pellentesque lectus, sit amet finibus leo aliquet a. Sed semper odio at dolor scelerisque, feugiat viverra mi blandit. Vivamus pretium
+    nisl vitae dolor molestie pulvinar. Etiam quis sodales dolor, vel malesuada nisi.
+    <br><br>
+    Curabitur egestas pellentesque eleifend. Morbi lobortis eget lacus eu ultrices. Sed sit amet nisi odio. Suspendisse sit amet porta
+    lectus. Etiam vel dolor erat. Aliquam erat volutpat. Cras consequat orci massa, eget maximus nunc ornare vel. Aenean eget pulvinar
+    ipsum, at auctor enim. Nullam faucibus odio a pellentesque interdum. Aliquam volutpat tellus mauris, eget tristique libero porta in.
+    Duis non massa in est ultrices viverra.
+    <br><br>
+    In tortor eros, ultrices id ante mattis, cursus mollis nunc. Duis semper convallis mauris id pharetra. Integer faucibus neque sit amet
+    ipsum mollis tempor. Mauris a feugiat felis, sed sagittis ex. Sed posuere turpis eget scelerisque viverra. Nulla facilisi. Aenean
+    laoreet quam sed eros sagittis, in suscipit erat iaculis. Fusce augue lorem, interdum facilisis massa sed, placerat scelerisque mauris.
+    Nullam vulputate urna in erat gravida finibus. Integer non suscipit quam, ultricies scelerisque nunc. Mauris non pretium mauris.
+    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    <br><br>
+    Suspendisse ut diam et nisi aliquet bibendum eu non lacus. Ut sodales vel erat ac aliquet. Donec id turpis id ipsum bibendum accumsan.
+    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean sagittis mauris sed rutrum molestie. Nunc
+    accumsan venenatis elit ut euismod. Aenean elementum congue est nec imperdiet.
+</p>
+<form action="../" onsubmit="return checkCheckBoxes(this);">
+    <p><input type="checkbox" name="MyCheckbox" value="Agree"><span id="agreement-text">I agree the Terms and Conditions</span></p>
+    <p><input type="submit" name="submit" value="Submit!"></p>
+</form>
+<div id="validatorChkBox"></div>
+
+<script type="text/javascript" language="JavaScript">
+<!--
+function checkCheckBoxes(theForm) {
+    if (
+    theForm.MyCheckbox.checked == false)
+    {
+        document.getElementById("validatorChkBox").innerHTML = "You need to agree the Terms and Conditions";
+        return false;
+    } else {
+        return true;
+    }
+}
+//-->
+
+</script>
+</body>
+</html>

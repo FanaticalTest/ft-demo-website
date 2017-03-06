@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title>Demo Website - Shopping</title>
+</head>
+<body>
+<form name="frm1">
+    <table>
+        <tr>
+            <th>Article ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                <div id="productid-5214">5214</div>
+            </td>
+            <td>
+                <div id="productid-5214-desc">Product01</div>
+            </td>
+            <td>
+                <div id="productid-5214-price">20</div>
+            </td>
+            <td><input type="button" id="productid-5214-buy" value="Buy" onclick="return clickBuy(5214);"></td>
+        </tr>
+        <tr>
+            <td>
+                <div id="productid-5656">5656</div>
+            </td>
+            <td>
+                <div id="productid-5656-desc">Product02</div>
+            </td>
+            <td>
+                <div id="productid-5656-price">10</div>
+            </td>
+            <td><input type="button" id="productid-5656-buy" value="Buy" onclick="return clickBuy(5656);"></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Shopping cart (only 1 item at the time)</th>
+        </tr>
+        <tr>
+            <td>ProductId</td>
+            <td>
+                <div id="selected-product"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Select quantity</td>
+            <td>
+                <select id="qt-selector" onchange="return updatePrice();">
+                    <option value="1" selected="selected">1 piece</option>
+                    <option value="2">2 pieces</option>
+                    <option value="3">3 pieces</option>
+                    <option value="4">4 pieces</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Total price without VAT</td>
+            <td>
+                <div id="price-wo-vat"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>VAT 8%</td>
+            <td>
+                <div id="vat-value"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Total price</td>
+            <td>
+                <div id="total-price"></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" id="page-redirect" value="Done" onclick="location.href = '/index.html';"></td>
+        </tr>
+    </table>
+</form>
+
+<script type="text/javascript" language="JavaScript">
+<!--
+function clickBuy(prodId) {
+    var unitPriceLabelId = "productid-" + prodId + "-price";
+    var unitPrice = document.getElementById(unitPriceLabelId).innerHTML;
+    var qtSelector = document.getElementById("qt-selector");
+    var qt = qtSelector.options[qtSelector.selectedIndex].value;
+    var totalPriceWoVat = parseFloat(unitPrice)*parseFloat(qt);
+    var vat = parseFloat(totalPriceWoVat)*0.08;
+    var totalPrice = parseFloat(totalPriceWoVat)+parseFloat(vat);
+
+    document.getElementById("selected-product").innerHTML = prodId;
+    document.getElementById("price-wo-vat").innerHTML = totalPriceWoVat;
+    document.getElementById("vat-value").innerHTML = vat;
+    document.getElementById("total-price").innerHTML = totalPrice;
+
+    return true;
+}
+
+function updatePrice() {
+    var prodId = document.getElementById("selected-product").innerHTML;
+
+    return clickBuy(prodId);
+}
+
+//-->
+</script>
+</body>
+</html>
