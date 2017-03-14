@@ -8,5 +8,6 @@ include_once include $_SERVER['DOCUMENT_ROOT']."/api/class/dataLayer.php";
 include $_SERVER['DOCUMENT_ROOT']."/api/inc/debug.php";
 
 $sql = new dataLayer();
+header('Content-Type: application/json');
 echo $sql->createTable();
 ?>

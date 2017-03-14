@@ -16,5 +16,6 @@ else
 }
 //insert data in db
 $sql = new dataLayer();
+header('Content-Type: application/json');
 echo $sql->insertBook($data[title], $data[author], $data[edition]);
 ?>
