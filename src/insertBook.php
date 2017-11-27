@@ -4,7 +4,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $data = array("title" => $_POST["title"], "author" => $_POST["author"] , "edition" => $_POST["edition"]);                                                                    
     $data_string = json_encode($data);                                                                                   
                                                                                                                         
-    $ch = curl_init('http://'.getenv('API_SERVER').':'.getenv('API_PORT').'/api/insertBook.php');                                                                      
+    // using docker
+    // $ch = curl_init('http://'.getenv('API_SERVER').':'.getenv('API_PORT').'/api/insertBook.php');     
+    // using normal
+    $ch = curl_init('http://demo-website.fanaticaltest.com/api/insertBook.php');                                                                
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      

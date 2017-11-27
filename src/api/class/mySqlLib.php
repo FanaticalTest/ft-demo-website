@@ -3,7 +3,10 @@ class mySqlLib
 {
     public function oMysqli()
     {
-        return new mysqli(getenv('SQL_SERVER'),getenv('SQL_USER'),getenv('SQL_PASSWORD'),getenv('SQL_DB'),getenv('SQL_PORT'));
+        // For docker
+        // return new mysqli(getenv('SQL_SERVER'),getenv('SQL_USER'),getenv('SQL_PASSWORD'),getenv('SQL_DB'),getenv('SQL_PORT'));
+        // for traditional website
+        return new mysqli('localhost','ftdemowebsite','XXXXXXXXXXXX','XXXXXXXXXXX');
     }
 
     public function escape($val)

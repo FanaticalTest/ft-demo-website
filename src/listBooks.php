@@ -4,7 +4,10 @@ function listBooks()
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_URL, 'http://'.getenv('API_SERVER').':'.getenv('API_PORT').'/api/listBooks.php');
+    // using docker
+    // curl_setopt($ch, CURLOPT_URL, 'http://'.getenv('API_SERVER').':'.getenv('API_PORT').'/api/listBooks.php');
+    // using normal server
+    curl_setopt($ch, CURLOPT_URL, 'http://demo-website.fanaticaltest.com/api/listBooks.php');
     $result = curl_exec($ch);
     curl_close($ch);
 
