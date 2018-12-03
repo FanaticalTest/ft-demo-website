@@ -4,12 +4,25 @@
     </head>
     <body>
             <?php
-            if (rand(0, 1) == 0) {
-                echo "Have a good day!<br>";
+            $random = rand(0, 4);
+            if ($random == 0) {
+                echo "Have a good day!<br>" . time();;
             }
-            else
+            elseif ($random == 1)
             {
-                echo "Have a good week!<br>";
+                echo "Have a good week!<br>" . time();
+            }
+            elseif ($random == 2)
+            {
+                echo "Have a good afternoon!<br>" . time();
+            }
+            elseif ($random == 3)
+            {
+                echo "Have a good night!<br>" . time();
+            }
+            elseif ($random == 4)
+            {
+                echo "Have a good morning!<br>" . time();
             }
             ?>
     </body>
